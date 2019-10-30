@@ -19,3 +19,11 @@ ex. sumAllPrimes(10) == 17
 Remove from the array whatever is in the following arguments. Return the leftover numbers in an array
 
 ex. seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6) == [3, 4, 'hello']
+
+### CHALLENGE 4: SORT BY HEIGHT
+
+Some people are standing in a row in a park. There are trees between them which cannot be moved. Your task is to rearrange the people by their heights in a non-descending order without moving the trees.
+
+ex. a = [-1, 150, 190, 170, -1, -1, 160, 180]
+
+sortByHeight(a) == [-1, 150, 160, 170, -1, -1, 180, 190]

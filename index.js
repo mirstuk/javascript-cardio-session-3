@@ -26,6 +26,11 @@ function seekAndDestroy(array, ...items) {
   return array.filter(item => items.indexOf(item) === -1);
 }
 
+function sortByHeight(array) {
+  let orderedItems = array.filter(item => item > -1).sort((a, b) => a - b);
+  return array.map(item => (item === -1 ? item : orderedItems.shift()));
+}
+
 // console.log('\naddAll()\n', addAll());
 // console.log('\naddAll(1, 2, 3, 4, 5, 6)\n', addAll(1, 2, 3, 4, 5, 6));
 // console.log('\naddAll(2, 5, 6, 7)\n', addAll(2, 5, 6, 7));
@@ -36,3 +41,8 @@ function seekAndDestroy(array, ...items) {
 //   "\nseekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6)\n",
 //   seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6)
 // );
+
+console.log(
+  '\nsortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])\n',
+  sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])
+);
