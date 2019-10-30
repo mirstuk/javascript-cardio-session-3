@@ -45,21 +45,30 @@ function missingLetters(string) {
   return res;
 }
 
-// console.log('\naddAll()\n', addAll());
-// console.log('\naddAll(1, 2, 3, 4, 5, 6)\n', addAll(1, 2, 3, 4, 5, 6));
-// console.log('\naddAll(2, 5, 6, 7)\n', addAll(2, 5, 6, 7));
+function evenOddSums(array) {
+  let evenSum = 0;
+  let oddSum = 0;
+  array.forEach(elem =>
+    elem % 2 === 0 ? (evenSum += elem) : (oddSum += elem)
+  );
+  return [evenSum, oddSum];
+}
 
-// console.log('\nsumAllPrimes(10)\n', sumAllPrimes(10));
+console.log('\naddAll()\n', addAll());
+console.log('\naddAll(1, 2, 3, 4, 5, 6)\n', addAll(1, 2, 3, 4, 5, 6));
+console.log('\naddAll(2, 5, 6, 7)\n', addAll(2, 5, 6, 7));
 
-// console.log(
-//   "\nseekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6)\n",
-//   seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6)
-// );
+console.log('\nsumAllPrimes(10)\n', sumAllPrimes(10));
 
-// console.log(
-//   '\nsortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])\n',
-//   sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])
-// );
+console.log(
+  "\nseekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6)\n",
+  seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6)
+);
+
+console.log(
+  '\nsortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])\n',
+  sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])
+);
 
 console.log("\nmissingLetters('abce')\n", missingLetters('abce'));
 console.log("\nmissingLetters('abe')\n", missingLetters('abe'));
@@ -70,4 +79,9 @@ console.log(
 console.log(
   "\nmissingLetters('abcdefghijklmnopqrstuvwxyz')\n",
   missingLetters('abcdefghijklmnopqrstuvwxyz')
+);
+
+console.log(
+  '\nevenOddSums([50, 60, 60, 45, 71])\n',
+  evenOddSums([50, 60, 60, 45, 71])
 );
