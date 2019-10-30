@@ -31,6 +31,20 @@ function sortByHeight(array) {
   return array.map(item => (item === -1 ? item : orderedItems.shift()));
 }
 
+function missingLetters(string) {
+  let res;
+  let diff = 1;
+  for (let i = 1; i < string.length; i++) {
+    diff = string.charCodeAt(i) - string.charCodeAt(i - 1);
+    while (diff > 1) {
+      if (res === undefined) res = [];
+      res.unshift(String.fromCharCode(string.charCodeAt(i - 1) + diff - 1));
+      diff -= 1;
+    }
+  }
+  return res;
+}
+
 // console.log('\naddAll()\n', addAll());
 // console.log('\naddAll(1, 2, 3, 4, 5, 6)\n', addAll(1, 2, 3, 4, 5, 6));
 // console.log('\naddAll(2, 5, 6, 7)\n', addAll(2, 5, 6, 7));
@@ -42,7 +56,18 @@ function sortByHeight(array) {
 //   seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6)
 // );
 
+// console.log(
+//   '\nsortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])\n',
+//   sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])
+// );
+
+console.log("\nmissingLetters('abce')\n", missingLetters('abce'));
+console.log("\nmissingLetters('abe')\n", missingLetters('abe'));
 console.log(
-  '\nsortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])\n',
-  sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])
+  "\nmissingLetters('abcdefghjklmno')\n",
+  missingLetters('abcdefghjklmno')
+);
+console.log(
+  "\nmissingLetters('abcdefghijklmnopqrstuvwxyz')\n",
+  missingLetters('abcdefghijklmnopqrstuvwxyz')
 );
