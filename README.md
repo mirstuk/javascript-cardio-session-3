@@ -13,3 +13,9 @@ ex. addAll(2,5,6,7) === 20
 Pass in a number to loop up to and add all of the prime numbers. A prime number is a whole number greater than 1 whose only factors are 1 and itself
 
 ex. sumAllPrimes(10) == 17
+
+### CHALLENGE 3: SEEK & DESTROY
+
+Remove from the array whatever is in the following arguments. Return the leftover numbers in an array
+
+ex. seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6) == [3, 4, 'hello']

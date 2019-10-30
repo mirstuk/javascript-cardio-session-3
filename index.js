@@ -22,8 +22,17 @@ function isPrime(n) {
   return true;
 }
 
+function seekAndDestroy(array, ...items) {
+  return array.filter(item => items.indexOf(item) === -1);
+}
+
 // console.log('\naddAll()\n', addAll());
 // console.log('\naddAll(1, 2, 3, 4, 5, 6)\n', addAll(1, 2, 3, 4, 5, 6));
 // console.log('\naddAll(2, 5, 6, 7)\n', addAll(2, 5, 6, 7));
 
 // console.log('\nsumAllPrimes(10)\n', sumAllPrimes(10));
+
+// console.log(
+//   "\nseekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6)\n",
+//   seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6)
+// );
